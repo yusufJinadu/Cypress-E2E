@@ -1,11 +1,11 @@
 class AuthenticationApi {
     constructor() {
         this._baseUrl = Cypress.env('api_base_url');
-        this._token = 'QpwL5tke4Pnpja7X2';
+        this._correctToken = 'QpwL5tke4Pnpja7X2';
     }
 
     returnCorrectToken() {
-        return this._token;
+        return this._correctToken;
     }
 
     getUserCredentials() {
