@@ -1,25 +1,22 @@
 class SecurePage {
 	constructor() {
-        this._route = '/secure'
-        this._loggedInBanner = '#flash'
+		this._route = '/secure';
+		this._loggedInBanner = '#flash';
 	}
 
-    getRoute(){
-        return this._route
-    }
+	getRoute() {
+		return this._route;
+	}
 
-    getLoggedInbanner(){
-        return this._loggedInBanner
-    }
+	getLoggedInbanner() {
+		return this._loggedInBanner;
+	}
 
-    getTexts(){
-        return {
-            loggedInBannerText: 'You logged into a secure area!'
-        }
-        
-    }
-  
-	
+	getTexts() {
+		return {
+			loggedInBannerText: 'You logged into a secure area!',
+		};
+	}
 }
 
-export default new SecurePage()
+export default new SecurePage();

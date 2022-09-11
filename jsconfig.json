@@ -1,8 +1,6 @@
 {
 	"compilerOptions": {
 		"module": "es6",
-		"types": [
-			"cypress"
-		]
+		"types": ["cypress"]
 	}
 }

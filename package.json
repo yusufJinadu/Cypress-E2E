@@ -1,26 +1,26 @@
 {
-  "name": "quandoo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "cypress run",
-    "ui-test": "cypress open",
-    "lint": "prettier --check .",
-    "format": "prettier --write ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format" 
-    }
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cypress": "^10.7.0"
-  },
-  "devDependencies": {
-    "husky": "^8.0.1",
-    "prettier": "2.7.1"
-  }
+	"name": "quandoo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "cypress run",
+		"ui-test": "cypress open",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "format"
+		}
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cypress": "^10.7.0"
+	},
+	"devDependencies": {
+		"husky": "^8.0.1",
+		"prettier": "2.7.1"
+	}
 }
