@@ -37,5 +37,5 @@ describe('Login functionality should work correctly', function () {
 			loginPage.getTexts().wrongPasswordText
 		).should('exist');
 	});
-	//
+	////
 });
