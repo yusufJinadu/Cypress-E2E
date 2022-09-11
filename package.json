@@ -6,13 +6,11 @@
 	"scripts": {
 		"test": "cypress run",
 		"ui-test": "cypress open",
-		"lint": "prettier --check .",
-		"format": "prettier --write ."
+		"prepare": "husky install",
+		"scriptname": "cmd"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run format"
-		}
+	"lint-staged": {
+		"**/*": "prettier --write --ignore-unknown"
 	},
 	"author": "",
 	"license": "ISC",
@@ -21,6 +19,7 @@
 	},
 	"devDependencies": {
 		"husky": "^8.0.1",
+		"lint-staged": "^13.0.3",
 		"prettier": "2.7.1"
 	}
 }
