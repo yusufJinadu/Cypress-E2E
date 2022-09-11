@@ -1,6 +1,6 @@
 import loginPage from '../../support/page-objects/login/loginPage';
 import securePage from '../../support/page-objects/secure/securePage';
-const fixture = 'login/login';
+const fixture = 'ui/login';
 describe('Login functionality should work correctly', function () {
     beforeEach(() => {
         cy.fixture(fixture).then(function ({ correctCredentials, wrongCredentials }) {
@@ -36,5 +36,6 @@ describe('Login functionality should work correctly', function () {
             loginPage.getFailedLoginBanner(),
             loginPage.getTexts().wrongPasswordText
         ).should('exist');
+        cy.task('setUserCredentials', { username: 'password' });
     });
 });
