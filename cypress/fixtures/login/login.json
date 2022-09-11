@@ -1,0 +1,11 @@
+{
+    "correctCredentials":{
+        "username" : "tomsmith",
+        "password" : "SuperSecretPassword!"
+    },
+    "wrongCredentials":{
+        "username" : "tomsmithen",
+        "password" : "SuperSecretPassword!!!"
+    }
+   
+}
