@@ -34,6 +34,12 @@ class AuthenticationApi {
             body: { email, password },
         });
     }
+
+    verifyAuthResponse({ status, statusText, body }) {
+        cy.wrap(status).should('eq', 200);
+        cy.wrap(statusText).should('eq', 'OK');
+        cy.wrap(body.token).should('eq', this.returnCorrectToken());
+    }
 }
 
 export default new AuthenticationApi();
