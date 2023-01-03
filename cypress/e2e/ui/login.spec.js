@@ -36,6 +36,5 @@ describe('Login functionality should work correctly', function () {
             loginPage.getFailedLoginBanner(),
             loginPage.getTexts().wrongPasswordText
         ).should('exist');
-        cy.task('setUserCredentials', { username: 'password' });
     });
 });
