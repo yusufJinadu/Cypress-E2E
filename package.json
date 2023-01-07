@@ -10,10 +10,8 @@
 	},
 	"author": "",
 	"license": "ISC",
-	"dependencies": {
-		"cypress": "^10.7.0"
-	},
 	"devDependencies": {
+		"cypress": "^12.3.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
 		"prettier": "2.7.1"
