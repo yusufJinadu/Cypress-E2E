@@ -5,10 +5,8 @@ describe('Registration Endpoints should return correct token', function () {
     });
     it('User should be able to get correct token with registration data', function () {
         cy.task('getCredentials').then((credentials) => {
-            authenticationApi.register(credentials).then(({ status, statusText, body }) => {
-                cy.wrap(status).should('eq', 200);
-                cy.wrap(statusText).should('eq', 'OK');
-                cy.wrap(body.token).should('eq', authenticationApi.returnCorrectToken());
+            authenticationApi.register(credentials).then((token) => {
+                authenticationApi.verifyAuthResponse(token);
             });
         });
     });

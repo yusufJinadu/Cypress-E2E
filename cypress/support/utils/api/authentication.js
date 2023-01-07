@@ -1,11 +1,11 @@
 class AuthenticationApi {
     constructor() {
         this._baseUrl = Cypress.env('api_base_url');
-        this._token = 'QpwL5tke4Pnpja7X2';
+        this._correctToken = 'QpwL5tke4Pnpja7X2';
     }
 
     returnCorrectToken() {
-        return this._token;
+        return this._correctToken;
     }
 
     getUserCredentials() {
@@ -33,6 +33,12 @@ class AuthenticationApi {
             url: `${this._baseUrl}/api/login`,
             body: { email, password },
         });
+    }
+
+    verifyAuthResponse({ status, statusText, body }) {
+        cy.wrap(status).should('eq', 200);
+        cy.wrap(statusText).should('eq', 'OK');
+        cy.wrap(body.token).should('eq', this.returnCorrectToken());
     }
 }
 

@@ -17,7 +17,7 @@ This project Uses Cypress.js which uses Node.js, Mocha, and Chai in the backgrou
 
 2. Navigate to the folder with cd "Quandoo-E2E"
 
-3. on the terminal and enter "npm install"
+3. on the terminal and enter "npm install" (This might take a while due to cypress post installation in the background, please be patient)
 
 ## Running the application in headless mode
 

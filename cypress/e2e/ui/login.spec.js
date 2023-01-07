@@ -11,7 +11,7 @@ describe('Login functionality should work correctly', function () {
         });
         cy.visit(`${Cypress.env('fe_base_url') + loginPage.getRoute()} `);
     });
-    it('User should be able to login with correct credential', function () {
+    it('User should be able to login with correct credentials', function () {
         loginPage.tryLogin(this.correctUsername, this.correctPassword);
         cy.url().should('eq', `${Cypress.env('fe_base_url') + securePage.getRoute()}`);
         cy.contains(
@@ -36,6 +36,5 @@ describe('Login functionality should work correctly', function () {
             loginPage.getFailedLoginBanner(),
             loginPage.getTexts().wrongPasswordText
         ).should('exist');
-        cy.task('setUserCredentials', { username: 'password' });
     });
 });
