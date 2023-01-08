@@ -1,4 +1,5 @@
 import authenticationApi from '../../support/utils/api/authentication';
+// Get email address from API and use it to login
 describe('Login endpoints should return correct token', function () {
     beforeEach(() => {
         authenticationApi.getUserCredentials();

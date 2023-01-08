@@ -1,4 +1,5 @@
 import authenticationApi from '../../support/utils/api/authentication';
+// get email address from API and use it to register
 describe('Registration Endpoints should return correct token', function () {
     beforeEach(() => {
         authenticationApi.getUserCredentials();
